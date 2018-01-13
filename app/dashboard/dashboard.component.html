@@ -1,0 +1,13 @@
+<h3>Quotes</h3>
+
+<div class="grid grid-pad">
+  <a *ngFor="let symbol of quoteList" class="col-1-4"
+      routerLink="/detail/{{symbol.id}}">
+    <div class="module symbol">
+      <h4>{{symbol.name}}</h4>
+    </div>
+  </a>
+</div>
+
+<p>
+<app-symbol-search></app-symbol-search>

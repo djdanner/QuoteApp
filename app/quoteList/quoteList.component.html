@@ -1,0 +1,21 @@
+<h2>Selected Quote Details:</h2>
+<div>
+  <label>Quote name:
+    <input #symbolName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(symbolName.value); symbolName.value=''">
+    add
+  </button>
+</div>
+
+<h2>Quotes List:</h2>
+<ul class="quoteList">
+  <li *ngFor="let symbol of quoteList">
+    <a routerLink="/detail/{{symbol.id}}">
+      <span class="badge">{{symbol.id}}</span> {{symbol.name}}
+    </a>
+    <button class="delete" title="delete symbol"
+    (click)="delete(symbol)">x</button>
+  </li>
+</ul>
