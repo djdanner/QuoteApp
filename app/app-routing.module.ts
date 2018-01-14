@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { QuoteListComponent} from './quoteList/quoteList.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { QuoteStreamComponent} from './quote-stream/quote-stream.component';
 
 const routes: Routes = [
   // This route redirects a URL that fully matches the empty path to the route whose path is '/dashboard'.
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'detail/:id', component: QuoteDetailsComponent },
   { path: 'quoteList', component: QuoteListComponent },
+  { path: 'quote-stream', component: QuoteStreamComponent },
 ]
 
 @NgModule({

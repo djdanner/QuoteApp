@@ -18,6 +18,7 @@ import { MessageService } from './message.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { QuoteSearchComponent } from './symbol-search/symbol-search.component';
+import { QuoteStreamComponent } from './quote-stream/quote-stream.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { QuoteSearchComponent } from './symbol-search/symbol-search.component';
     QuoteDetailsComponent,
     MessagesComponent,
     DashboardComponent,
-    QuoteSearchComponent
+    QuoteSearchComponent,
+    QuoteStreamComponent
   ],
 
   imports: [

@@ -1,0 +1,15 @@
+<h2>Quote Stream:</h2>
+<ul class="quoteStream">
+  <!-- <li *ngFor="let symbol of quoteList">
+    <span class="badge">{{symbol.symbol}}</span> {{symbol.name}}
+  </li> -->
+  <li *ngFor="let symbol of quoteList">
+    <!-- USD Display 1.0-0 =
+    minimum of 1 digit to the left of the decimal.
+    minimum and maximim of 0 digits to the right of the decimal -->
+    {{ symbol.symbol}}
+    {{ symbol.name}}
+    {{ symbol.price_usd | currency:'USD':'symbol':'1.0-0'}}
+    {{ (symbol.percent_change_24h / 100) | percent:'1.1'}}
+  </li>
+</ul>
